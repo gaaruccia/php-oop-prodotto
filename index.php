@@ -1,33 +1,38 @@
 <?php
     class Prodotto{
         
+        public $oggetto;
         public $quantita;
         public $peso;
         public $colore;
 
-        function __construct($quantita){
-            $this->quantita = $quantita;
+        function __construct($oggetto){
+            $this->oggetto = $oggetto;
         }
 
         public function printMe() {
-            echo "Quantità:" . $this->quantita . " "
-                 . "Peso:" . $this->peso . " "
-                 . "Colore:" . $this->colore . "<br>";
+            echo "Oggetto:" . " " . $this->oggetto . " "
+                 . "Quantità:" . " " . $this->quantita . " "
+                 . "Peso:" .  " " .$this->peso . " "
+                 . "Colore:" .  " " .$this->colore . "<br>";
         }
     }
     
     
-    $carote = new Prodotto(10);
+    $carote = new Prodotto("Carote");
+    $carote->quantita = "10";
     $carote->peso = "10kg";
     $carote->colore = "Arancio";
 
     
-    $patate = new Prodotto(15);
+    $patate = new Prodotto("Patate");
+    $patate->quantita = "15";
     $patate->peso = "15kg";
     $patate->colore = "Giallo";
 
     
-    $pomodori = new Prodotto(20);
+    $pomodori = new Prodotto("Pomodori");
+    $pomodori->quantita = "20";
     $pomodori->peso = "20kg";
     $pomodori->colore = "Rosso";
 
